@@ -1,8 +1,7 @@
 const express=require("express")
 const Router=express.Router();
+const userController=require('../Controllers/userController')
 
-Router.get('/',(req,res)=>{
-    res.send('Hello there')
-})
+Router.post('/register',userController.Register);
 
 module.exports=Router;
